@@ -7,6 +7,8 @@ accelerated CSS, WebGL, and HTML5 video.
 
 ## Showcase
 
+[![IYoutube Example](https://img.youtube.com/vi/phj2hwZIioo/0.jpg)](https://www.youtube.com/watch?v=phj2hwZIioo)
+
 [Full blog post about the project.](https://github.com/resin-io-playground/resin-wpe)
 
 * Rendering WebGL [abstract shapes](https://mrdoob.neocities.org/023/)
