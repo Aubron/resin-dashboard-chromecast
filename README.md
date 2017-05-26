@@ -149,7 +149,7 @@ To enable this functionaltiy, set the following environment variable:
 
 | Key                    | Value
 |------------------------|---------
-|**`WPE_CCNAME`** | **`{Name of the Chromecast}`**
+|**`CC_NAME`** | **`{Name of the Chromecast}`**
 
 ## Known Issues
 
