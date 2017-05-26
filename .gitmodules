@@ -13,3 +13,7 @@
 	path = base-image/meta-raspberrypi
 	url = git://git.yoctoproject.org/meta-raspberrypi
 	branch = morty
+[submodule "base-image/meta-virtualization"]
+	path = base-image/meta-virtualization
+	url = git://git.yoctoproject.org/meta-virtualization
+	branch = morty
