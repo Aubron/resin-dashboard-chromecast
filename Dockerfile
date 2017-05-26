@@ -1,7 +1,11 @@
-FROM petrosagg/resin-wpe:raspberrypi3-17-04.01
+FROM schlarpc/resin-wpe-python:5
 
 COPY udev-rules/ /etc/udev/rules.d/
 
-COPY wpe-init /wpe-init
+COPY ./dependencies.sh /dependencies.sh
+RUN sh /dependencies.sh
 
+COPY ./inputSwitch.py /inputSwitch.py
+
+COPY wpe-init /wpe-init
 CMD [ "/wpe-init" ]

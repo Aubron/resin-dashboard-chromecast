@@ -1,11 +1,13 @@
-# WPE Webkit for the RaspberryPi
+# WPE Webkit + Chromecast Monitoring for the RaspberryPi
 
-This project provides an easy way of running [WPE
-Webkit](https://www.igalia.com/wpe/) for the RaspberryPi. WPEWebkit is a full
+This project, a fork of [resin-wpe](https://github.com/resin-io-playground/resin-wpe) provides an easy way of running [WPE
+Webkit](https://www.igalia.com/wpe/) on a screen that can be cast to, while using the WPE browser as a splash screen. WPEWebkit is a full
 featured browser that takes advantage of the GPU to provide hardware
 accelerated CSS, WebGL, and HTML5 video.
 
 ## Showcase
+
+[Full blog post about the project.](https://github.com/resin-io-playground/resin-wpe)
 
 * Rendering WebGL [abstract shapes](https://mrdoob.neocities.org/023/)
 	* <img src="http://i.imgur.com/RiP5gwe.gif" />
@@ -27,6 +29,7 @@ accelerated CSS, WebGL, and HTML5 video.
 	* [Loading a URL](#loading-a-url)
 	* [Offline content](#offline-content)
 	* [Enabling mouse](#enabling-mouse)
+* [Chromecast Support](#chromecast-support)
 
 ## Getting started
 
@@ -135,6 +138,18 @@ webpage includes iframes.
 | Key                    | Value
 |------------------------|---------
 |**`WPE_BCMRPI_CURSOR`** | **`1`**
+
+## Chromecast Support
+
+This build of resin-wpe uses pychromecast to monitor the status of a Chromecast that is assumed to be plugged into the same TV.
+When the chromecast is closed, a watchdog script notices, and sends a CEC 'as' (active source) command to the TV.
+Functionally this allows you to set a custom Chromecast splash screen, something google has yet to allow.
+
+To enable this functionaltiy, set the following environment variable:
+
+| Key                    | Value
+|------------------------|---------
+|**`WPE_CCNAME`** | **`{Name of the Chromecast}`**
 
 ## Known Issues
 

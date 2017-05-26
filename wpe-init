@@ -5,4 +5,5 @@ udevadm trigger
 
 fbcp &
 
-WPE_BCMRPI_TOUCH=1 WPELauncher $WPE_URL
+WPE_BCMRPI_TOUCH=1 WPELauncher $WPE_URL &
+python3 inputSwitch.py "$WPE_CCNAME"
